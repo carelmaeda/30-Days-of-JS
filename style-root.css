@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Open+Sans&family=Orbitron&display=swap");
+
+:root {
+  --color-primary: rgb(28, 13, 121);
+  --color-secondary: rgb(49, 109, 200);
+  --color-tertiary: rgb(35, 143, 107);
+  --color-dark: #080808;
+  --color-light: rgb(245, 245, 245);
+  --ff-primary: "Open Sans", sans-serif;
+  --ff-secondary: "Lora", serif;
+  --fs-h1: 3.1rem;
+  --fs-h2: 2.3rem;
+  --fs-h3: 1.7rem;
+  --fs-h4: 1.3rem;
+  --fs-p: 1rem;
+  --fs-text-small: 0.8rem;
+}

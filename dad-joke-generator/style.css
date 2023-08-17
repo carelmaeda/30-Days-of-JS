@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 1rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background {
+  z-index: -99;
+  background-size: 20%;
+  background-color: pink;
+}
+
+h1 {
+  margin-block: 0;
+}
+
+.heading {
+  text-align: center;
+  font-size: 10vw;
+  font-weight: 400;
+  margin-block: 1rem;
+  font-family: "Londrina Solid", cursive;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 3px 3px 0px rgb(215, 150, 70);
+}
+
+
+.container {
+  padding: 1rem;
+}
+
+.joke-container {
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+  margin: auto;
+  background-color: #494786;
+  padding: 2rem;
+  border-radius: 25px;
+  max-width: 600px;
+  height: 400px;
+}
+
+
+.joke {
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  margin: 2rem;
+  height: 100px;
+  width: 300px;
+  margin: auto;
+  background-color: #c4bebb;
+  border: solid 35px #272929;
+  border-radius: 5px 5px 20px 20px;
+  color: black;
+}
+
+.btn {
+  max-width: 300px;
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 1rem;
+  text-transform: uppercase;
+  color: black;
+  background-color: #9a2257;
+}
+
+.btn:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  transition: all 300ms ease;
+}

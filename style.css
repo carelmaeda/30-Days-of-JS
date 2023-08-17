@@ -71,23 +71,6 @@ body {
   height: 32rem;
 }
 
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.marketing h2 {
-  font-weight: 400;
-}
-
-.marketing .col-lg-4 p {
-  margin-right: 0.75rem;
-  margin-left: 0.75rem;
-}
 
 /* Featurettes
 ------------------------- */
@@ -104,18 +87,19 @@ body {
   letter-spacing: -0.05rem;
 }
 
+.featurette-thumb img{
+}
+
 .key {
   margin: 0.5rem;
   border: solid;
   padding: 0.2rem 0.8rem;
   border-radius: 3px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
 }
 
-.thumb {
-  border-radius: 15px;
-}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -133,8 +117,5 @@ body {
   }
 }
 
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
-  }
+
 }

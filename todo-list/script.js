@@ -14,6 +14,7 @@ function addTask(){
         li.appendChild(span);
     }
     inputBox.value = "";
+    saveData();
 }
 
 //Check / Uncheck or Remove from list
@@ -21,14 +22,26 @@ function addTask(){
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
+        saveData();
     }
     else if (e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
+        saveData();
     }
 }, false)
 
+//Save the data in the browser
 
-//Enter to Add item
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data")
+}
+showTask();
+
+
+//Hit Enter Key to Add item
 
 inputBox.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
@@ -36,3 +49,4 @@ inputBox.addEventListener("keypress", function (event) {
         addTask();
     }
 });
+

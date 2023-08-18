@@ -71,10 +71,14 @@ p {
   padding: 2rem 1rem;
 }
 
+
+
 ul li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
-  font-size: 1.2rem;
-  padding: 12px 8px 12px 50px;
+  padding: 8px 8px 12px 50px;
   user-select: none;
   cursor: pointer;
   position: relative;
@@ -89,11 +93,10 @@ ul li::before{
   background-size: cover;
   background-position: center;
   background-image: url(/todo-list/images/unchecked.png);
-  top: 12px;
   left: 8px;
 }
 
-ul li .checked{
+ul li.checked{
   color: #555;
   text-decoration: line-through;
 }
@@ -110,7 +113,6 @@ ul li span{
   width: 25px;
   aspect-ratio: 1/1;
   border-radius: 2px;
-  float: right;
 }
 
 ul li span:hover{

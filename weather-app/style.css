@@ -39,26 +39,26 @@ p {
 h1 {
   font-family: var(--ff-primary);
   text-transform: uppercase;
-  color: var(--color-light);
+  color: var(--color-white);
 }
 
 h2 {
   font-family: var(--ff-primary);
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--color-light);
+  color: var(--color-white);
 }
 
 h3 {
   font-family: var(--ff-secondary);
   font-weight: 500;
-  color: var(--color-light);
+  color: var(--color-white);
 }
 
 p {
   font-family: var(--ff-primary);
   text-transform: uppercase;
-  color: var(--color-light);
+  color: var(--color-white);
 }
 
 .weather {

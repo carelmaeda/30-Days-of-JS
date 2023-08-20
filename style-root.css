@@ -4,8 +4,11 @@
   --color-primary: rgb(28, 13, 121);
   --color-secondary: rgb(49, 109, 200);
   --color-tertiary: rgb(35, 143, 107);
+  --color-light: rgb(137, 174, 255);
   --color-dark: #080808;
-  --color-light: rgb(245, 245, 245);
+  --color-white: rgb(245, 245, 245);
+  --color-danger: rgb(200, 62, 49);
+  --color-success: rgb(49, 200, 62);
   --ff-primary: "Open Sans", sans-serif;
   --ff-secondary: "Lora", serif;
   --fs-h1: 3.1rem;

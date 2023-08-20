@@ -8,7 +8,7 @@
 }
 
 body {
-  background: no-repeat linear-gradient(135deg, #153677,#4e085f);
+  background: no-repeat linear-gradient(135deg, #153677, #4e085f);
   min-height: 100vh;
   padding: 0;
   margin: 0;
@@ -42,28 +42,27 @@ p {
 h1 {
   font-family: var(--ff-primary);
   text-transform: uppercase;
-  color: var(--color-light);
+  color: var(--color-white);
 }
 
 h2 {
   font-family: var(--ff-primary);
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--color-light);
+  color: var(--color-white);
 }
 
 h3 {
   font-family: var(--ff-secondary);
   font-weight: 500;
-  color: var(--color-light);
+  color: var(--color-white);
 }
 
 p {
   font-family: var(--ff-primary);
   text-transform: uppercase;
-  color: var(--color-light);
+  color: var(--color-white);
 }
-
 
 .container-card {
   background-color: var(--color-secondary);
@@ -71,9 +70,7 @@ p {
   padding: 2rem 1rem;
 }
 
-
-
-ul li{
+ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +81,7 @@ ul li{
   position: relative;
 }
 
-ul li::before{
+ul li::before {
   content: "";
   position: absolute;
   height: 28px;
@@ -96,16 +93,16 @@ ul li::before{
   left: 8px;
 }
 
-ul li.checked{
+ul li.checked {
   color: #555;
   text-decoration: line-through;
 }
 
-ul li.checked::before{
+ul li.checked::before {
   background-image: url(/todo-list/images/checked.png);
 }
 
-ul li span{
+ul li span {
   display: inline-grid;
   line-height: 25px;
   place-content: center;
@@ -115,12 +112,11 @@ ul li span{
   border-radius: 2px;
 }
 
-ul li span:hover{
-  background-color: var(--color-light);
+ul li span:hover {
+  background-color: var(--color-white);
   color: var(--color-secondary);
   cursor: pointer;
 }
-
 
 .error {
   display: none;

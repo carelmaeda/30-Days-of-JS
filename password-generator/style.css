@@ -20,7 +20,7 @@ h1 {
 
 h2 {
   margin: 0;
-  font-size: var(--fs-h2);
+  font-size: var(--fs-h4);
   line-height: 1.3;
 }
 
@@ -44,8 +44,6 @@ h1 {
 
 h2 {
   font-family: var(--ff-primary);
-  font-weight: bold;
-  text-transform: uppercase;
   color: var(--color-white);
 }
 
@@ -61,14 +59,31 @@ p {
   color: var(--color-white);
 }
 
-.weather {
-  display: none;
-}
-
 .container-card {
-  background-color: var(--color-secondary);
+  background-color: var(--color-dark);
   border-radius: 16px;
   padding: 2rem 1rem;
+}
+
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.display input {
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+
+.display img {
+  width: 30px;
+  cursor: pointer;
 }
 
 .error {

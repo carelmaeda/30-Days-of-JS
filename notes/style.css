@@ -65,26 +65,33 @@ p {
   padding: 2rem 1rem;
 }
 
-.display {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-block: 1rem;
-  padding: 0.5rem 1rem;
+h1 img{
+  width: 50px;
+}
+
+.input-box{
+  position: relative;
+  text-transform:none;
+  width:100%;
+  max-width: 500px;
+  min-height: 150px;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  padding: 1rem;
+  margin: 1rem 0;
+  outline: none;
   border-radius: 5px;
-  background: #fff;
 }
 
-.display input {
-  margin: 0;
-  border: 0;
-  outline: 0;
-}
-
-.display img {
-  width: 30px;
+.input-box img{
+  width: 25px;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
   cursor: pointer;
 }
+
+
 
 .error {
   display: none;

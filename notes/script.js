@@ -1,52 +1,53 @@
-const passwordBox = document.getElementById("password");
-const lenght = 12; //password lenght
-const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const lowerCase = "abcdefghijklmnopqrstuvwxyz";
-const number = "0123456789";
-const symbol = "!@#$%^&*()_+-={}[]|<>?/~";
+const notesContainer = document.querySelector(".notes-container");
+const createBtn = document.querySelector(".btn");
+let notes = document.querySelectorAll(".input-box");
 
-var bannerElement = document.createElement("div");
+function showNotes(){
+    notesContainer.innerHTML = localStorage.getItem("notes");
+}
+showNotes();
+
+//store note content on browser
+
+function updateStorage(){
+    localStorage.setItem("notes", notesContainer.innerHTML);
+}
+
+//click to add a note section
+
+createBtn.addEventListener("click", () => {
+    let inputBox = document.createElement("p");
+    let img = document.createElement("img");
+    inputBox.className = "input-box";
+    inputBox.setAttribute("contenteditable","true");
+    img.src = "images/delete.png";
+    notesContainer.appendChild(inputBox).appendChild(img)
+;})
 
 
-const allChars = upperCase + lowerCase + number + symbol;
+//click on the img to remove note section
 
-function createPassword(){
-    let password = "";
-    password += upperCase[Math.floor(Math.random() * upperCase.length)];
-    password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-    password += number[Math.floor(Math.random() * number.length)];
-    password += symbol[Math.floor(Math.random() * symbol.length)];
-
-    while(lenght > password.length){
-        password += allChars[Math.floor(Math.random()* allChars.length)];
+notesContainer.addEventListener("click", function(e){
+    if(e.target.tagName === "IMG"){
+        e.target.parentElement.remove();
+        updateStorage()
     }
-    passwordBox.value = password;
-}
+    else if(e.target.tagName === "P"){
+        notes = document.querySelectorAll(".input-box");
+        notes.forEach(nt => {
+            nt.onkeyup = function(){
+                updateStorage();
+            }
+        })
+    }
+})
 
-function copyPassword(){
-    passwordBox.select();
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
-    
-    console.log("Password Copied")
+document.addEventListener("keydown", event =>{
+    if(event.key === "Enter"){
+        document.execCommand("insertLineBreak");
+        event.preventDefault();
+    }
+} )
 
-    bannerElement.textContent = "Password copied!!!";
-        bannerElement.style.position = "fixed";
-        bannerElement.style.top = "0";
-        bannerElement.style.left = "50%";
-        bannerElement.style.transform = "translateX(-50%)";
-        bannerElement.style.background = "green";
-        bannerElement.style.color = "white";
-        bannerElement.style.padding = "10px";
-        bannerElement.style.zIndex = "9999";
-        bannerElement.style.transition = "opacity 2s ease-in-out";
-        
-        document.body.appendChild(bannerElement);
-        
-        setTimeout(function() {
-            bannerElement.style.opacity = "0";
-            setTimeout(function() {
-                document.body.removeChild(bannerElement);
-            }, 2000);
-        }, 2000);
-}
+
+

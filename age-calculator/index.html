@@ -37,13 +37,18 @@
         <div
           class="container container-card mx-auto my-5 col-md-7 text-light p-4"
         >
-          <h1><img src="/notes/images/notes.png" alt=""> Notes</h1>
-          <div class="btn btn-primary"><i class="fa fa-notes-medical pr-2"></i>Create Note</div>
-          <div class="notes-container"></div>
-          
+          <div class="calculator"></div>
+          <h1>Age Calculator</h1>
+          <div class="input-group w-100">
+            <input type="date" id="date" class="form-control" />
+            <button onclick="calculateAge()" class="btn btn-primary">
+              Calculate
+            </button>
+          </div>
+          <p id="result"></p>
         </div>
       </div>
     </div>
-    <script src="/notes/script.js"></script>
+    <script src="/age-calculator/script.js"></script>
   </body>
 </html>

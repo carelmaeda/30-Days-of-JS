@@ -65,33 +65,13 @@ p {
   padding: 2rem 1rem;
 }
 
-h1 img{
+h1 img {
   width: 50px;
 }
 
-.input-box{
-  position: relative;
-  text-transform:none;
-  width:100%;
-  max-width: 500px;
-  min-height: 150px;
-  background-color: var(--color-white);
-  color: var(--color-dark);
-  padding: 1rem;
-  margin: 1rem 0;
-  outline: none;
-  border-radius: 5px;
+#result span {
+  color: var(--color-light);
 }
-
-.input-box img{
-  width: 25px;
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  cursor: pointer;
-}
-
-
 
 .error {
   display: none;

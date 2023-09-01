@@ -70,27 +70,38 @@ h1 img{
 }
 
 .input-box{
+display: flex;
+align-items: center;
+}
+
+.input-box input{
+  flex: 1;
+  margin-right: 20px;
+  padding: 1rem 1.2rem;
+  border: 0;
+  outline: 0;
   position: relative;
-  text-transform:none;
-  width:100%;
-  max-width: 500px;
-  min-height: 150px;
-  background-color: var(--color-white);
-  color: var(--color-dark);
-  padding: 1rem;
-  margin: 1rem 0;
-  outline: none;
-  border-radius: 5px;
 }
 
-.input-box img{
-  width: 25px;
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  cursor: pointer;
+.input-box button{
+  position: relative;
 }
 
+.input-box input::-webkit-calendar-picker-indicator{
+ top: 0;
+ left: 0;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ width: auto;
+ position: absolute;
+ background-position: calc(100%-10px);
+ background-size: 30px;
+ cursor: pointer;
+ height: auto;
+
+
+}
 
 
 .error {

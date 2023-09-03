@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>30 Days of JS - To-Do List</title>
+    <title>30 Days of JS - Password Toggle</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -17,7 +17,7 @@
       integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/todo-list/style.css" />
+    <link rel="stylesheet" href="/password-view/style.css" />
     <link rel="stylesheet" href="/style-root.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -34,36 +34,15 @@
     <div class="container">
       <div class="row">
         <!--Container Start-->
-        <div class="container-card col-10 col-md-6 mx-auto my-5 text-light">
-          <i class="fa fa-list-ul fa-2x mx-0 mr-4 my-2" aria-hidden="true"></i>
-          <h2 class="d-inline">To-Do List</h2>
-          <div class="input-group my-2">
-            <input
-              type="text"
-              id="form-control"
-              class="form-control"
-              placeholder="What's up?"
-              aria-label="What's up?"
-              aria-describedby="btn-add"
-            />
-            <button
-              class="btn btn-outline-light"
-              type="button"
-              id="btn-add"
-              onclick="addTask()"
-            >
-              Add
-            </button>
-          </div>
-          <div id="list-container">
-            <ul class="m-0 py-2 m-0 px-0">
-              <li class="checked">Task 1</li>
-              <li>Task 2</li>
-            </ul>
+        <div class="container container-card mx-auto my-5 p-4">
+          <h1>Password</h1>
+          <div class="input-box w-50">
+            <input type="password" id="password" class="form-control" />
+            <button id="eyeIcon">Show</button>
           </div>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="/password-view/script.js"></script>
   </body>
 </html>

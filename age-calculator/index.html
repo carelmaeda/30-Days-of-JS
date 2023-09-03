@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>30 Days of JS - Password Generator</title>
+    <title>30 Days of JS - Age Calculator</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -37,14 +37,18 @@
         <div
           class="container container-card mx-auto my-5 col-md-7 text-light p-4"
         >
-          <h1><img src="/notes/images/notes.png" alt="" /> Notes</h1>
-          <div class="btn btn-primary">
-            <i class="fa fa-notes-medical pr-2"></i>Create Note
+        <div class="calculator">
+          <h1>Age Calculator</h1>
+          <div class="input-box input-group">
+            <input type="date" name="" id="date" class="form-control">
+            <button class="btn btn-primary" onclick="calculateAge()">Calculate</button>
           </div>
-          <div class="notes-container"></div>
+          <span id="result"></span>
+        </div>  
+          </div>
         </div>
       </div>
     </div>
-    <script src="/agite-calculator/script.js"></script>
+    <script src="/age-calculator/script.js"></script>
   </body>
 </html>

@@ -59,31 +59,21 @@ p {
   color: var(--color-white);
 }
 
-.container-card {
-  background-color: var(--color-dark);
-  border-radius: 16px;
-  padding: 2rem 1rem;
+.stopwatch {
+  text-align: center;
+  background: var(--color-dark);
+  border-radius: 10px;
 }
 
-.input-box {
-  background: #fff;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: auto;
+.buttons {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.input-box input {
-  width: 100%;
-  padding: 10px 0;
-  border: 0;
-  outline: 0;
-  font-size: 1.5rem;
-}
-
-.input-box i {
+.buttons img {
   cursor: pointer;
+  width: 50px;
+  aspect-ratio: 1/1;
 }

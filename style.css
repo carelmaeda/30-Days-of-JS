@@ -1,3 +1,41 @@
 .box{
   background-color: navy;
 }
+
+.hero{
+  background: grey;
+  height: 80vh;
+}
+
+.hero h1{
+  display: inline-block;
+}
+
+.row1{
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.row2{
+  font-size: 180px;
+  letter-spacing: 5px;
+}
+
+.row2 , .row1{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.hero .hero-serif{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 250px;
+}
+
+.hero .hero-xl{
+  font-size: 300px;
+}
+
+.hero .hero-sm{
+  font-size: 54px;
+}

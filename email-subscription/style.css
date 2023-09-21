@@ -39,7 +39,11 @@ p {
 h1 {
   font-family: var(--ff-primary);
   text-transform: uppercase;
+<<<<<<< HEAD
+  color: var(--color-dark);
+=======
   color: var(--color-white);
+>>>>>>> refs/remotes/origin/cma-mac
 }
 
 h2 {
@@ -59,8 +63,24 @@ p {
   color: var(--color-white);
 }
 
+<<<<<<< HEAD
+.container-card {
+  background-color: var(--color-dark);
+  border-radius: 16px;
+  padding: 2rem 1rem;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 17, 93, 0.3), rgba(3, 0, 91, 0.3)),
+    url(/email-subscription/images/hero.jpg);
+  height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+=======
 .hero{
   height: 90vh;
   width: 100%;
   
+>>>>>>> refs/remotes/origin/cma-mac
 }

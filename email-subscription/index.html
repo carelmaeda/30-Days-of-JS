@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>30 Days of JS - Horizontal Scrolling Image Gallery</title>
+    <title>30 Days of JS - Email Subscription</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -36,10 +36,27 @@
               <div class="row">
                 <!--Container Start-->
                   <h1>Image Gallery</h1>
-                  <p>Scroll to move horizontally</p>
+                  <p>Please input e-mail</p>
                   </div>
             </div>
     </div>
+    
+    <form name="submit-to-google-sheet">
+      <input name="email" type="email" placeholder="Email" required>
+      <button type="submit">Send</button>
+    </form>
+    
+    <script>
+      const scriptURL = '<SCRIPT URL>'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
     <script src="/email-subscription/script.js"></script>
   </body>
 </html>

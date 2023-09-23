@@ -38,17 +38,22 @@
           class="container container-card mx-auto my-5 col-md-7 text-light p-4"
         >
           <h1>Text to Speech Converter</h1>
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            class="form-control"
-            placeholder="Write anything here..."
-          ></textarea>
-          <div class="d-grid">
-            <button class="btn btn-primary">Convert</button>
-          </div>
+          <form>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              class="form-control"
+              placeholder="Write anything here..."
+            ></textarea>
+            <div class="d-flex my-2">
+              <select class="form-control mr-2" name="" id="select">
+                <option></option>
+              </select>
+              <button class="btn btn-primary" id="button">Convert</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

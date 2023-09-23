@@ -39,11 +39,7 @@ p {
 h1 {
   font-family: var(--ff-primary);
   text-transform: uppercase;
-<<<<<<< HEAD
   color: var(--color-dark);
-=======
-  color: var(--color-white);
->>>>>>> refs/remotes/origin/cma-mac
 }
 
 h2 {
@@ -71,8 +67,32 @@ p {
 .hero {
   background: linear-gradient(rgba(0, 17, 93, 0.3), rgba(3, 0, 91, 0.3)),
     url(/email-subscription/images/hero.jpg);
-  height: 90vh;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.launch-time p {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.rocket {
+  width: 200px;
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  animation: rocket 4s linear infinite;
+}
+
+@keyframes rocket {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  100% {
+    bottom: 105%;
+    opacity: 1;
+  }
 }

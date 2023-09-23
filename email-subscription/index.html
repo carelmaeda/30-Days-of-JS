@@ -15,6 +15,7 @@
   </head>
   <body>
     <div class="hero">
+      <div class="alert alert-success d-none" id="alert" role="alert"></div>
       <div class="container">
         <div class="row">
           <!--Container Start-->
@@ -23,31 +24,67 @@
             <h1>The Best Website Ever</h1>
             <br />
             <p>Subscribe for more details</p>
-            <form name="submit-to-google-sheet">
-              <input name="email" type="email" placeholder="Email" required>
-              <input name="firstName" type="text" placeholder="First Name">
-              <input name="lastName" type="text" placeholder="Last Name">
-              <button type="submit">Send</button>
+            <form name="submit-to-google-sheet" class="my-2 w-75">
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  name="firstName"
+                  type="text"
+                  placeholder="First Name"
+                  autocomplete="given-name"
+                />
+                <label for="firstName" class="form-label">Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  name="lastName"
+                  type="text"
+                  autocomplete="family-name"
+                  placeholder="Last Name"
+                />
+                <label for="lastName" class="form-label">Last Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  required
+                />
+                <label for="email" class="form-label">Email</label>
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-primary btn-lg" type="submit">
+                  Send
+                </button>
+              </div>
             </form>
           </div>
         </div>
       </div>
     </div>
 
-   
-    
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxEZBsp6JAcFd3RYPXedheYm9L8S-PJvh3PWlO2ehIzuFaxIVuL1gnDBA-nn4C5-WaQ/exec'
-      const form = document.forms['submit-to-google-sheet']
-    
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxEZBsp6JAcFd3RYPXedheYm9L8S-PJvh3PWlO2ehIzuFaxIVuL1gnDBA-nn4C5-WaQ/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("alert");
 
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            setInterval(function () {
+              msg.classList.remove("d-none");
+              msg.innerHTML = "Thank you for subscribing!";
+            }, 1000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
 
     <script src="/email-subscription/script.js"></script>
     <script

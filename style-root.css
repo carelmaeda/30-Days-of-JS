@@ -25,3 +25,8 @@
   font-family: sans-serif;
   box-sizing: border-box;
 }
+
+.logo {
+  width: 70px;
+  display: inline-block;
+}

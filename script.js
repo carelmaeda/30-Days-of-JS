@@ -12,11 +12,11 @@
 
         // Hide all sections
         sections.forEach((section) => {
-          section.style.display = "none";
+          section.classList.add("d-none");
         });
 
         // Show the selected section
-        document.getElementById(filterValue).style.display = "block";
+        document.getElementById(filterValue).classList.remove("d-none");
 
         // Remove active class from all buttons
         filterButtons.forEach((btn) => {

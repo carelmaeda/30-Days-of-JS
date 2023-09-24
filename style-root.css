@@ -25,3 +25,22 @@
   font-family: sans-serif;
   box-sizing: border-box;
 }
+
+.logo {
+  width: 70px;
+  display: inline-block;
+}
+
+.iphone-x {
+  margin: 40px auto;
+  height: 85vh;
+  width: 24vw;
+  border-radius: 40px;
+  box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919,
+    0px 0px 0px 20px #111;
+  overflow-y: auto;
+}
+
+.iphone-x::-webkit-scrollbar {
+  display: none;
+}

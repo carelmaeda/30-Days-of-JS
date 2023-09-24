@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days of JS - Email Subscription</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/email-subscription/style.css" />
+    <link rel="stylesheet" href="/style-root.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="alert alert-success d-none" id="alert" role="alert"></div>
+      <div class="container">
+        <div class="row">
+          <!--Container Start-->
+          <div class="border col-md-auto my-5 p-5 rounded">
+            <h3>Coming Soon!</h3>
+            <h1>The Best Website Ever</h1>
+            <br />
+            <p>Subscribe for more details</p>
+            <form name="submit-to-google-sheet" class="my-2 w-75">
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  name="firstName"
+                  type="text"
+                  placeholder="First Name"
+                  autocomplete="given-name"
+                />
+                <label for="firstName" class="form-label">Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  name="lastName"
+                  type="text"
+                  autocomplete="family-name"
+                  placeholder="Last Name"
+                />
+                <label for="lastName" class="form-label">Last Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  required
+                />
+                <label for="email" class="form-label">Email</label>
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-primary btn-lg" type="submit">
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxEZBsp6JAcFd3RYPXedheYm9L8S-PJvh3PWlO2ehIzuFaxIVuL1gnDBA-nn4C5-WaQ/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            setInterval(function () {
+              msg.classList.remove("d-none");
+              msg.innerHTML = "Thank you for subscribing!";
+            }, 1000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
+    <script src="/email-subscription/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+@import "/style-root.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+/*Font Sizing*/
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: 1.6;
+}
+
+h2 {
+  margin: 0;
+  font-size: var(--fs-h4);
+  line-height: 1.3;
+}
+
+h3 {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+p {
+  margin: 0;
+  font-size: var(--fs-p);
+}
+
+/*Font Family*/
+
+h1 {
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: var(--ff-primary);
+}
+
+h3 {
+  font-family: var(--ff-secondary);
+  font-weight: 500;
+}
+
+p {
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+}
+
+.container-card {
+  background-color: var(--color-dark);
+  border-radius: 16px;
+  padding: 2rem 1rem;
+}

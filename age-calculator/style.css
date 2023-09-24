@@ -69,12 +69,11 @@ h1 img {
   width: 50px;
 }
 
-.input-box{
+.input-box {
   position: relative;
-  text-transform:none;
-  width:100%;
+  text-transform: none;
+  width: 100%;
   max-width: 500px;
-  min-height: 150px;
   background-color: var(--color-white);
   color: var(--color-dark);
   padding: 1rem;
@@ -83,15 +82,20 @@ h1 img {
   border-radius: 5px;
 }
 
-.input-box img{
+.input-box input {
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  position: relative;
+}
+
+.input-box img {
   width: 25px;
   position: absolute;
   bottom: 1rem;
   right: 1rem;
   cursor: pointer;
 }
-
-
 
 .error {
   display: none;

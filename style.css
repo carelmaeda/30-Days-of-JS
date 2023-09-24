@@ -1,3 +1,62 @@
-.box{
-  background-color: navy;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Hero*/
+
+.hero {
+  background: grey;
+  max-width: 1000px;
+  margin: auto;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.hero-30,
+.hero-of,
+.hero-js {
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  width: auto;
+}
+
+.hero-30 {
+  font-size: 20rem;
+  font-weight: 900;
+  letter-spacing: -1rem;
+  line-height: 0.8;
+}
+
+.hero-days {
+  width: auto;
+  font-family: "Abril Fatface", cursive;
+  font-size: 7rem;
+  line-height: 0.9;
+}
+
+.hero-of {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+.hero-js {
+  font-size: 4rem;
+  font-weight: 900;
+  max-width: 900px;
+  letter-spacing: 2px;
+}
+
+/*Work*/
+
+.work {
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-js {
+    font-size: 7rem;
+    line-height: 1.5;
+    letter-spacing: 3px;
+  }
 }

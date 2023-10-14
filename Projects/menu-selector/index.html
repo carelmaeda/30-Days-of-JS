@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYGOS Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav id="sidebar" class="bg-light">
+        <div class="p-4">
+            <h3>PAYGOS Dashboard</h3>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#territory">Territory Selection</a>
+                </li>
+                <li>
+                    <a href="#clinic">Clinic Selection</a>
+                </li>
+                <li>
+                    <a href="#products">Browse Products</a>
+                </li>
+                <!-- Add more sidebar links as needed -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Collapsible Sidebar Toggle Button -->
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Page Content Goes Here -->
+        <div class="container-fluid">
+            <!-- Content for the dashboard -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript for Collapsible Sidebar -->
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
